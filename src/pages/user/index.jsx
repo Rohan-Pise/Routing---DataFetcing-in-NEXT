@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import useSWR from 'swr';
+import styles from '../../styles/user.module.css'
 const fetcher = (...args)=>fetch(...args).then((res)=> res.json());
 
 
@@ -17,7 +18,7 @@ export default  function NewFunc() {
  
 
  return (
-    <div>
+    <div className = {styles.text}>
       <h1>This is user's index</h1>
       <ul>
         {data.users.length > 0 ? (
